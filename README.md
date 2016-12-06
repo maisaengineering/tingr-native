@@ -1,0 +1,4 @@
+# Tingr
+
+KidsApp
+TODO: documentation
