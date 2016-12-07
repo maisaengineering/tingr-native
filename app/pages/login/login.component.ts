@@ -1,6 +1,8 @@
 import { Router } from "@angular/router";
 import { Component, OnInit } from "@angular/core";
 import { Page } from "ui/page";
+// To Pass paramenters to another page using Navigation extras
+import {Router, NavigationExtras} from "@angular/router";
 
 @Component({
     selector: "my-app",
@@ -22,7 +24,13 @@ export class LoginComponent implements OnInit {
 
     submitEmail() {
         console.log("Email: " + this.email);
-        this.router.navigate(["/verify-password"]);
+        // pass user provided email to next page using NavigationExtras via routing
+        let navigationExtras: NavigationExtras = {
+            queryParams: {
+                "email": this.email
+            }
+        };
+        this.router.navigate(["/verify-password"], navigationExtras);
     }
 
 
