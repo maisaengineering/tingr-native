@@ -1,8 +1,6 @@
-import { Router } from "@angular/router";
+import { Router, NavigationExtras } from "@angular/router";
 import { Component, OnInit } from "@angular/core";
 import { Page } from "ui/page";
-// To Pass paramenters to another page using Navigation extras
-import {Router, NavigationExtras} from "@angular/router";
 
 @Component({
     selector: "my-app",
