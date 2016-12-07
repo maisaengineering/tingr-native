@@ -17,7 +17,7 @@ export class VerifyPasswordComponent implements OnInit {
     public email: string;
 
     ngOnInit() {
-        this.page.actionBarHidden = true;
+       // this.page.actionBarHidden = true;
         // this.page.backgroundImage = "res://bg_login";
     }
 
@@ -32,7 +32,7 @@ export class VerifyPasswordComponent implements OnInit {
     submitPassword() {
         console.log("Email: " + this.teacher.email);
         console.log("Password: " + this.teacher.password);
-        this.router.navigate(["dashboard"]);
+        this.router.navigate(["home"]);
     }
 
     forgotPassword() {

@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
     email = '';
 
     ngOnInit() {
-        this.page.actionBarHidden = true;
+       // this.page.actionBarHidden = true;
     }
 
     constructor(private router: Router, private page: Page) {

@@ -1,0 +1,19 @@
+<ActionBar title="App Title">
+    <ActionItem (tap)="toggle()">
+        <!-- example: using font-awesome for hamburger menu but you can use whatever you'd like -->
+        <Button class="fa" text="&#xf0c9;"></Button>
+        <!-- however in your project, would be easier to use this plugin: https://github.com/NathanWalker/nativescript-fonticon -->
+    </ActionItem>
+</ActionBar>
+<RadSideDrawer #drawer [transition]="sideDrawerTransition" selectionBehavior="None">
+    <StackLayout tkDrawerContent>
+        <!-- anything you want in drawer -->
+        <!-- for example: -->
+        <!-- you want options {exact: true} on the first one because otherwise it would be considered active when 'Other Page' in active as well -->
+        <Button text="Home" [nsRouterLink]="['/home']" nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}"></Button>
+        <Button text="Other Page" [nsRouterLink]="['/home/otherPath']" nsRouterLinkActive="active"></Button>
+    </StackLayout>
+    <StackLayout tkMainContent>
+        <router-outlet></router-outlet>
+    </StackLayout>
+</RadSideDrawer>
