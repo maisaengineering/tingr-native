@@ -32,6 +32,7 @@ export class VerifyPasswordComponent implements OnInit {
     submitPassword() {
         console.log("Email: " + this.teacher.email);
         console.log("Password: " + this.teacher.password);
+        this.router.navigate(["dashboard"]);
     }
 
     forgotPassword() {
