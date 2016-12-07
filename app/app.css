@@ -7,3 +7,10 @@ TextField {
     padding: 10;
     font-size: 13;
 }
+
+.link {
+    color: royalblue;
+    font-size: 16;
+    text-decoration: underline;
+}
+

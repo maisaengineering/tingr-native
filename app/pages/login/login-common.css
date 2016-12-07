@@ -8,7 +8,7 @@ Image {
     margin-top: 5;
     margin-bottom: 20;
 }
-Button, TextField {
+Button, TextField, .forgot-password {
     margin-left: 16;
     margin-right: 16;
     margin-bottom: 10;
@@ -17,4 +17,14 @@ Button, TextField {
     background-color: #CB1D00;
     color: white;
     margin-top: 20;
+}
+
+.login-label{
+    margin-top: 20;
+}
+
+.login-header{
+    text-align: center;
+    margin: 10;
+    font-size: 20;
 }

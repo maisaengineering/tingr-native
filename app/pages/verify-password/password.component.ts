@@ -31,7 +31,11 @@ export class VerifyPasswordComponent implements OnInit {
 
     submitPassword() {
         console.log("Email: " + this.teacher.email);
-        console.log("Password: " + this.teacher.password)
+        console.log("Password: " + this.teacher.password);
+    }
+
+    forgotPassword() {
+        //TODO: to define
     }
 
 
