@@ -19,6 +19,7 @@ export class AppComponent implements OnInit{
 
     constructor(private authService: AuthService, private authData: AuthData) { }
 
+
     ngOnInit() {
    /*     TODO: move the logic to application launchEvent
         http://docs.nativescript.org/angular/core-concepts/application-lifecycle
@@ -27,6 +28,7 @@ export class AppComponent implements OnInit{
         appSettings.remove("accessToken");
         appSettings.clear();
         console.log("accessTokenOuter: " +appSettings.getString("acccessToken"));*/
+        //appSettings.clear();
         if(typeof appSettings["accessToken"] === 'undefined'){
             this.authService.getClientToken()
                 .subscribe(
@@ -35,9 +37,10 @@ export class AppComponent implements OnInit{
                         appSettings.setString("accessToken", result.access_token);
                         appSettings.setNumber("accessTokenExpiry", result.expires_in);
                         this.authData.storage = result;
+                        console.log("TOKEN:"+appSettings.getString("accessToken"));
                     },
                     (error) => {
-                        console.log('Error: '+ JSON.stringify(error))
+                        console.log('AppComponent-Error: '+ JSON.stringify(error))
                     }
                 );
         }
