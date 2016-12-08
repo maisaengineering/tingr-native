@@ -1,7 +1,14 @@
-import { Component } from "@angular/core";
+// angular
+import {Component} from '@angular/core';
 
 @Component({
-  selector: "main",
-  template: "<page-router-outlet></page-router-outlet>"
+  moduleId: module.id,
+  selector: 'main',
+  template: `
+  <StackLayout>
+    <page-router-outlet></page-router-outlet>
+  </StackLayout>
+  `
 })
-export class AppComponent {}
+export class AppComponent {
+}
