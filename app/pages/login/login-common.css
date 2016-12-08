@@ -2,6 +2,7 @@ StackLayout {
     margin-left: 30;
     margin-right: 30;
     padding-bottom: 15;
+    padding-top: 20;
     background-color: white;
 }
 Image {
@@ -13,10 +14,16 @@ Button, TextField, .forgot-password {
     margin-right: 16;
     margin-bottom: 10;
 }
+
+.forgot-pass-link{
+    font-size: 16px;
+    text-decoration: underline;
+    margin: 0px 16px 10px 16px;
+}
+
 .submit-button {
-    background-color: #CB1D00;
     color: white;
-    margin-top: 20;
+    margin-top: 20px;
 }
 
 .login-label{
@@ -28,3 +35,4 @@ Button, TextField, .forgot-password {
     margin: 10;
     font-size: 20;
 }
+
