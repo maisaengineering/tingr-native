@@ -6,6 +6,7 @@ import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { SIDEDRAWER_DIRECTIVES } from "nativescript-telerik-ui/sidedrawer/angular";
 import { AppComponent } from "./app.component";
 import { routes, navigatableComponents } from "./app.routing";
+import { AuthData } from "./providers/data/oauth_data";
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { routes, navigatableComponents } from "./app.routing";
     AppComponent,
     ...navigatableComponents
   ],
+  providers: [AuthData],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
